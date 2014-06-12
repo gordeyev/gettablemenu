@@ -2,9 +2,13 @@
 <html>
 <head>
 	<title>{% block title %}Меню ресторанов для GetTable{% endblock %}</title>
+
+	<link href="{{ STATIC_URL }}bootstrap/css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
-	{% block content %}
-	{% endblock %}
+	<div class="wrapper container">
+		{% block content %}
+		{% endblock %}
+	</div>
 </body>
 </html>
