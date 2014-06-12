@@ -3,7 +3,8 @@
 <head>
 	<title>{% block title %}Меню ресторанов для GetTable{% endblock %}</title>
 
-	<link href="{{ STATIC_URL }}bootstrap/css/bootstrap.css" rel="stylesheet">
+	{% load staticfiles %}
+	<link href="{% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet">
 </head>
 <body>
 	<div class="wrapper container">
