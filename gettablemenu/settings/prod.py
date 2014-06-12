@@ -1,6 +1,8 @@
 from .base import *
 
 import dj_database_url
+from unipath import Path
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -24,3 +26,9 @@ DATABASES = {
 DATABASES['default'] = dj_database_url.config()
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'gettablemenu.herokuapp.com']
+
+PROJECT_DIR = str(Path(__file__).ancestor(2))
+
+STATICFILES_DIRS = (
+	os.path.join(PROJECT_DIR, "menu/static/"),
+)
