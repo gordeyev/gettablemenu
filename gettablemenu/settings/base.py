@@ -24,9 +24,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '_mgj$fu@u@-=i*yvve@xs&w#__7wjt6v=d@r5_s$7zi-r83$nd'
 
 
-ALLOWED_HOSTS = []
-
-
 # Application definition
 
 INSTALLED_APPS = (
