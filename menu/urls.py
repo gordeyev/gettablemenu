@@ -7,8 +7,5 @@ from menu import views
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', views.home, name='home'),
-    url(r'^menu/', include('menu.urls')),
-
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', views.menu_ru, name='menu-ru-urls'),
 )
