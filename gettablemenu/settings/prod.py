@@ -27,10 +27,12 @@ DATABASES['default'] = dj_database_url.config()
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'gettablemenu.herokuapp.com']
 
-# PROJECT_DIR = str(Path(__file__).ancestor(2))
-
-# STATICFILES_DIRS = (
-# 	os.path.join(BASE_DIR, "menu/static/"),
-# 	os.path.join(PROJECT_DIR, "menu/static/"),
-# 	'/var/www/static/',
+PROJECT_DIR = Path(__file__).ancestor(3)
+MEDIA_ROOT = PROJECT_DIR.child("media")
+STATIC_ROOT = PROJECT_DIR.child("static")
+STATICFILES_DIRS = (
+	PROJECT_DIR.child("assets"),
+)
+# TEMPLATE_DIRS = (
+# ￼￼￼￼￼￼￼    PROJECT_DIR.child("templates"),
 # )
