@@ -1,0 +1,1 @@
+web: DJANGO_SETTINGS_MODULE=gettablemenu.settings.prod gunicorn gettablemenu.wsgi
