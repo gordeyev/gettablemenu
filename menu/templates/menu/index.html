@@ -1,12 +1,10 @@
-<!Doctype html>
-<html>
-<head>
-	<title>GetTable menus</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}Главная - Меню ресторанов для GetTable{% endblock %}
+
+{% block content %}
 	<div class="wrapper container">
 		<h4>Меню ресторанов Москвы</h4>
 		<a href="{% url 'menu-ru-urls' %}">Список ресторанов Menu.Ru</a>
 	</div>
-</body>
-</html>
+{% endblock %}

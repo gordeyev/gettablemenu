@@ -1,14 +1,11 @@
-<!Doctype html>
-<html>
-<head>
-	<title>Menu.Ru</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+
+{% block content %}
 	<a href="{% url 'home' %}">Главная</a>
 	<ul>
 	{% for menu_ru_url in menu_ru_urls %}
 		<li><a href="{{ menu_ru_url.url }}">{{ menu_ru_url.title }}</a></li>
 	{% endfor %}
 	</ul>
-</body>
-</html>
+{% endblock %}
