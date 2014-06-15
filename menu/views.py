@@ -3,7 +3,7 @@ from django.shortcuts import render
 import requests
 from bs4 import BeautifulSoup
 
-from menu.models import MenuRuURLs
+from menu.models import MenuRuURLs, Resto, RestoMenu, Food
 
 # Create your views here.
 
@@ -13,6 +13,10 @@ def home(request):
 def menu_ru(request):
 	context = { 'menu_ru_urls': MenuRuURLs.objects.all()}
 	return render(request, "menu/menu-ru-list.html", context)
+
+def show_menu(request):
+	context = {}
+	return render(request, "menu/show-menu.html", context)
 
 
 

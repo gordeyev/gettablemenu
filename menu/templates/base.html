@@ -7,6 +7,11 @@
 	<link href="{% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet">
 </head>
 <body>
+	<ul class="nav nav-pills">
+		<li><a href="{% url 'home' %}">Главная</a></li>
+		<li><a href="{% url 'show-menu' %}">Показать меню</a></li>
+	</ul>
+	
 	<div class="wrapper container">
 		{% block content %}
 		{% endblock %}
