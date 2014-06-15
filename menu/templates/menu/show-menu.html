@@ -1,5 +1,26 @@
 {% extends 'base.html' %}
+{% load mptt_tags %}
 
 {% block content %}
-	Показать меню
+	<ul>
+	{% for resto in resto_list %}
+		<li>
+			{{ resto.name }}
+			<ul>
+					{% for menu1 in resto.menu.get_children %}
+						<li>
+						{{ menu1.name }}
+						<ul>
+						{% for menu2 in menu1.get_children %}
+						<li>
+							{{ menu2.name }}
+						</li>
+						{% endfor %}
+						</ul>
+					</li>
+					{% endfor %}
+			</ul>
+		</li>
+	{% endfor %}
+	</ul>
 {% endblock %}

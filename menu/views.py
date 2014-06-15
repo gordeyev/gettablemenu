@@ -15,7 +15,7 @@ def menu_ru(request):
 	return render(request, "menu/menu-ru-list.html", context)
 
 def show_menu(request):
-	context = {}
+	context = { 'resto_list': Resto.objects.all(), 'nodess': RestoMenu.objects.all() }
 	return render(request, "menu/show-menu.html", context)
 
 
